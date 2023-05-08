@@ -20,17 +20,17 @@
   },
   "scripts": {
     "build": "ncc build ./src/index.ts --out dist/",
-    "create-cannons": "node dist/index.js <>",
-    "create-compasses": "node dist/index.js <>",
-    "create-fishing-nets": "node dist/index.js <>",
-    "create-gold": "node dist/index.js <>",
-    "create-grappling-hooks": "node dist/index.js <>",
-    "create-gunpowder": "node dist/index.js <>",
-    "create-kraken": "node dist/index.js <>",
-    "create-muskets": "node dist/index.js <>",
-    "create-rum": "node dist/index.js <>",
-    "create-telescopes": "node dist/index.js <>",
-    "create-treasure-maps": "node dist/index.js <>",
-    "create-trophies": "node dist/index.js <>"
+    "create-cannons": "node dist/index.js --spl 120",
+    "create-compasses": "node dist/index.js --spl 60",
+    "create-fishing-nets": "node dist/index.js --spl 60",
+    "create-gold": "node dist/index.js --spl 10000",
+    "create-grappling-hooks": "node dist/index.js --spl 60",
+    "create-gunpowder": "node dist/index.js --spl 160",
+    "create-kraken": "node dist/index.js --nft 1",
+    "create-muskets": "node dist/index.js --spl 80",
+    "create-rum": "node dist/index.js --spl 200",
+    "create-telescopes": "node dist/index.js --nft 30",
+    "create-treasure-maps": "node dist/index.js --nft 30",
+    "create-trophies": "node dist/index.js --nft 10"
   }
 }
