@@ -1,6 +1,6 @@
 # 🏴‍☠️ Solana Pirate Bootcamp
 
-<p width="full" margin="auto" align="center" style = "background:gray"><img src="https://raw.githubusercontent.com/solana-developers/pirate-bootcamp/main/docs/images/ship-fire-1.png" alt="ship" width="350" margin="auto" align="center" bg="white"/></p>
+<p width="full" margin="auto" align="center" style = "background:gray"><img src="https://raw.githubusercontent.com/solana-developers/pirate-bootcamp/main/assets/ship-fire-1.png" alt="ship" width="350" margin="auto" align="center" bg="white"/></p>
 
 Ahoy! Ready to embark on a pirate-themed coding adventure? Join our Solana programming bootcamp and discover the treasures of blockchain development. Learn to build smart contracts and DApps using our hands-on approach and practical coding exercises. Set sail with us and become a Solana pirate!
 

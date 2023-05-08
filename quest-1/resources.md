@@ -40,4 +40,3 @@
     * https://solanacookbook.com/references/keypairs-and-wallets.html#how-to-generate-a-new-keypair
     * https://docs.solana.com/cli/conventions#keypair-conventions
     * https://stackoverflow.com/questions/69109345/how-to-use-keys-from-solana-keygen-to-use-a-web-wallet
-* 
