@@ -1,5 +1,24 @@
 # Resources
 
+* Installing NodeJS:
+    * https://www.linode.com/docs/guides/how-to-install-use-node-version-manager-nvm/
+    * https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/
+    * https://collabnix.com/how-to-install-and-configure-nvm-on-mac-os/
+    * https://adamtheautomator.com/install-nvm-on-windows/
+    * https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable
+* Installing Rust:
+    * https://www.rust-lang.org/tools/install
+    * https://solanacookbook.com/getting-started/installation.html
+    * https://learn.microsoft.com/en-us/windows/dev-environment/rust/setup
+* Installing the Solana CLI:
+    * https://solanacookbook.com/getting-started/installation.html
+    * https://docs.solana.com/cli/install-solana-cli-tools
+    * https://mammothinteractive.com/how-to-install-solana-on-windows/
+* Generating Keypairs:
+    * https://docs.metaplex.com/guides/cli-wallet
+    * https://solanacookbook.com/references/keypairs-and-wallets.html#how-to-generate-a-new-keypair
+    * https://docs.solana.com/cli/conventions#keypair-conventions
+    * https://stackoverflow.com/questions/69109345/how-to-use-keys-from-solana-keygen-to-use-a-web-wallet
 * General Solana Resources:
     * Docs & How-To's:
         * https://docs.solana.com/
@@ -27,16 +46,3 @@
             * https://seahorse-lang.org/
             * https://michaelhly.github.io/solana-py/
             * https://github.com/kevinheavey/anchorpy
-* Installing Rust:
-    * https://www.rust-lang.org/tools/install
-    * https://solanacookbook.com/getting-started/installation.html
-    * https://learn.microsoft.com/en-us/windows/dev-environment/rust/setup
-* Installing the Solana CLI:
-    * https://solanacookbook.com/getting-started/installation.html
-    * https://docs.solana.com/cli/install-solana-cli-tools
-    * https://mammothinteractive.com/how-to-install-solana-on-windows/
-* Generating Keypairs:
-    * https://docs.metaplex.com/guides/cli-wallet
-    * https://solanacookbook.com/references/keypairs-and-wallets.html#how-to-generate-a-new-keypair
-    * https://docs.solana.com/cli/conventions#keypair-conventions
-    * https://stackoverflow.com/questions/69109345/how-to-use-keys-from-solana-keygen-to-use-a-web-wallet

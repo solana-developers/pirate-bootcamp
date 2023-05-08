@@ -1,0 +1,36 @@
+{
+  "name": "pirate-bootcamp-setup",
+  "version": "0.1.0",
+  "description": "Workspace for setting up the Pirate Bootcamp",
+  "repository": "https://github.com/solana-developers/pirate-bootcamp.git",
+  "author": "Solana Foundation",
+  "license": "MIT",
+  "bin": "./dist/index.js",
+  "main": "./dist/index.js",
+  "dependencies": {
+    "@metaplex-foundation/js": "^0.19.2",
+    "@metaplex-foundation/mpl-token-metadata": "^2.11.0",
+    "@solana/spl-token": "^0.3.7",
+    "@solana/web3.js": "^1.75.0",
+    "@types/bn.js": "^5.1.1",
+    "@types/node": "^20.1.0",
+    "fs": "^0.0.1-security",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "build": "ncc build ./src/index.ts --out dist/",
+    "create-cannons": "node dist/index.js <>",
+    "create-compasses": "node dist/index.js <>",
+    "create-fishing-nets": "node dist/index.js <>",
+    "create-gold": "node dist/index.js <>",
+    "create-grappling-hooks": "node dist/index.js <>",
+    "create-gunpowder": "node dist/index.js <>",
+    "create-kraken": "node dist/index.js <>",
+    "create-muskets": "node dist/index.js <>",
+    "create-rum": "node dist/index.js <>",
+    "create-telescopes": "node dist/index.js <>",
+    "create-treasure-maps": "node dist/index.js <>",
+    "create-trophies": "node dist/index.js <>"
+  }
+}

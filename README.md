@@ -6,6 +6,11 @@ Ahoy! Ready to embark on a pirate-themed coding adventure? Join our Solana progr
 
 ---
 
+Interested in conducting this bootcamp, are ye?
+[How to Conduct this Bootcamp](./setup/README.md)
+
+---
+
 Feast 'yer eyes on the bootcamp agenda!
 
 ||

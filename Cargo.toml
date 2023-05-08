@@ -1,0 +1,10 @@
+[workspace]
+members = [
+    "quest-1/**/*",
+    "quest-2/**/*",
+    "quest-3/**/*",
+    "quest-4/**/*",
+    "quest-5/**/*",
+    "quest-6/**/*",
+    "quest-7/**/*",
+]
