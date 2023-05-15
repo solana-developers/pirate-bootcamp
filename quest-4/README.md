@@ -1,4 +1,4 @@
-# 💎 Quest 4 - Smuggling, Bargaining, and Upgrading Your Ship
+# 💎 Quest 4 - Trading Goods and Upgrading Your Ship
 
 📘 We saw how you can “tokenize” assets using NFTs & tokens, and trade them for Gold.
 

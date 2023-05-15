@@ -1,9 +1,7 @@
-# ✨ Quest 5 - An Efficient Port is a Profitable Port
+# ✨ Quest 5 - It's an Arbitrage Pirate's Life for Me
 
-📘 An efficient port is a profitable port.
+📘 A real scallywag always looks for the finest opportunities to make a quick buck!
 
-We’re going to spend a little time greasing the wheels and making sure our trading port is as efficient as possible, so we can maximize our gold!
+When it comes to goods markets (swaps), there’s no better opportunity than an arbitrage opportunity.
 
-We’ll learn how to make our marketplace more dynamic and speed things up with lookup tables & versioned transactions.
-
-Additionally, we’ll learn how to spot potential arbitrage opportunities at other pirates’ ports to earn some free Gold!
+We’re going to learn about how arbitrage works, how to build an arbitrage program, and how we can place arbitrage trades across other pirates’ markets!
