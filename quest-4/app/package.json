@@ -1,0 +1,47 @@
+{
+  "name": "swap-ui",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.27.0",
+    "@heroicons/react": "v1",
+    "@metaplex-foundation/mpl-token-metadata": "^2.11.1",
+    "@noble/ed25519": "^2.0.0",
+    "@solana/spl-token": "^0.3.7",
+    "@solana/wallet-adapter-base": "^0.9.22",
+    "@solana/wallet-adapter-react": "^0.15.32",
+    "@solana/wallet-adapter-react-ui": "^0.9.31",
+    "@solana/wallet-adapter-wallets": "^0.19.16",
+    "@solana/web3.js": "^1.76.0",
+    "@types/node": "20.1.4",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
+    "bs58": "^5.0.0",
+    "daisyui": "^2.51.6",
+    "date-fns": "^2.30.0",
+    "eslint": "8.40.0",
+    "eslint-config-next": "13.4.2",
+    "immer": "^10.0.2",
+    "next": "13.4.2",
+    "next-compose-plugins": "^2.2.1",
+    "next-transpile-modules": "^10.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
+    "typescript": "5.0.4",
+    "zustand": "^4.3.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "prettier": "^2.8.8",
+    "tailwindcss": "^3.3.2"
+  }
+}
