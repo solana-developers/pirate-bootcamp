@@ -74,12 +74,12 @@ import { SystemProgram, TransactionMessage, VersionedTransaction } from "@solana
     payerKey: payer.publicKey,
     recentBlockhash,
     instructions: [
+      // create the test wallet's account on chain
+      createTestAccountIx,
       // transfer lamports to the static wallet
       transferToStaticWalletIx,
       // transfer lamports to the test wallet
       transferToTestWalletIx,
-      // create the test wallet's account on chain
-      createTestAccountIx,
       // transfer lamports to the static wallet
       transferToStaticWalletIx,
     ],
