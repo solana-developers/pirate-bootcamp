@@ -1,0 +1,247 @@
+fileFormatVersion: 2
+guid: 6d0968d9cb3b4ae4fbede0bd2589dd03
+timeCreated: 1490127054
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: boat
+    100002: Bone001
+    100004: Bone002
+    100006: Bone003
+    100008: Bone004
+    100010: Bone005
+    100012: Bone006
+    100014: Box116
+    100016: Box117
+    100018: Box118
+    100020: Box119
+    100022: Box120
+    100024: Box121
+    100026: Box122
+    100028: Box130
+    100030: branch1
+    100032: Cylinder019
+    100034: Cylinder020
+    100036: //RootNode
+    100038: Line001
+    100040: Plane004
+    100042: Plane005
+    100044: pole
+    100046: Rock1
+    100048: Rock2
+    100050: Rock3
+    100052: Rock4
+    100054: Rock5
+    100056: rope
+    100058: rope 1
+    100060: rope 2
+    100062: rope 3
+    100064: rope 4
+    100066: rope 5
+    100068: veg1
+    100070: veg2
+    100072: veg3
+    100074: veg4
+    100076: veg5
+    400000: boat
+    400002: Bone001
+    400004: Bone002
+    400006: Bone003
+    400008: Bone004
+    400010: Bone005
+    400012: Bone006
+    400014: Box116
+    400016: Box117
+    400018: Box118
+    400020: Box119
+    400022: Box120
+    400024: Box121
+    400026: Box122
+    400028: Box130
+    400030: branch1
+    400032: Cylinder019
+    400034: Cylinder020
+    400036: //RootNode
+    400038: Line001
+    400040: Plane004
+    400042: Plane005
+    400044: pole
+    400046: Rock1
+    400048: Rock2
+    400050: Rock3
+    400052: Rock4
+    400054: Rock5
+    400056: rope
+    400058: rope 1
+    400060: rope 2
+    400062: rope 3
+    400064: rope 4
+    400066: rope 5
+    400068: veg1
+    400070: veg2
+    400072: veg3
+    400074: veg4
+    400076: veg5
+    2300000: boat
+    2300002: Box116
+    2300004: Box117
+    2300006: Box118
+    2300008: Box119
+    2300010: Box120
+    2300012: Box121
+    2300014: Box122
+    2300016: Box130
+    2300018: branch1
+    2300020: Cylinder019
+    2300022: Cylinder020
+    2300024: Plane005
+    2300026: pole
+    2300028: Rock1
+    2300030: Rock2
+    2300032: Rock3
+    2300034: Rock4
+    2300036: Rock5
+    2300038: rope
+    2300040: rope 1
+    2300042: rope 2
+    2300044: rope 3
+    2300046: rope 4
+    2300048: rope 5
+    2300050: veg1
+    2300052: veg2
+    2300054: veg3
+    2300056: veg4
+    2300058: veg5
+    3300000: boat
+    3300002: Box116
+    3300004: Box117
+    3300006: Box118
+    3300008: Box119
+    3300010: Box120
+    3300012: Box121
+    3300014: Box122
+    3300016: Box130
+    3300018: branch1
+    3300020: Cylinder019
+    3300022: Cylinder020
+    3300024: Plane005
+    3300026: pole
+    3300028: Rock1
+    3300030: Rock2
+    3300032: Rock3
+    3300034: Rock4
+    3300036: Rock5
+    3300038: rope
+    3300040: rope 1
+    3300042: rope 2
+    3300044: rope 3
+    3300046: rope 4
+    3300048: rope 5
+    3300050: veg1
+    3300052: veg2
+    3300054: veg3
+    3300056: veg4
+    3300058: veg5
+    4300000: Box116
+    4300002: Box117
+    4300004: Box118
+    4300006: Box119
+    4300008: Box120
+    4300010: Box121
+    4300012: Box122
+    4300014: Rock2
+    4300016: Rock1
+    4300018: Rock3
+    4300020: Box130
+    4300022: Cylinder019
+    4300024: Rock4
+    4300026: Rock5
+    4300028: rope
+    4300030: rope
+    4300032: rope
+    4300034: rope
+    4300036: rope
+    4300038: rope
+    4300040: pole
+    4300042: boat
+    4300044: Plane004
+    4300046: Cylinder020
+    4300048: Plane005
+    4300050: branch1
+    4300052: veg1
+    4300054: veg2
+    4300056: veg3
+    4300058: veg4
+    4300060: veg5
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Plane004
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 1
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

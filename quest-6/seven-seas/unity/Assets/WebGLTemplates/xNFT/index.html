@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity XNFT | {{{ PRODUCT_NAME }}}<</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
+  <body style="text-align: center; padding: 0; border: 0; margin: 0;">
+    <script>
+    "use strict";
+    // base-x encoding / decoding
+    // Copyright (c) 2018 base-x contributors
+    // Copyright (c) 2014-2018 The Bitcoin Core developers (base58.cpp)
+    // Distributed under the MIT software license, see the accompanying
+    // file LICENSE or http://www.opensource.org/licenses/mit-license.php.
+    function base(ALPHABET) {
+      if (ALPHABET.length >= 255) {
+        throw new TypeError("Alphabet too long");
+      }
+      var BASE_MAP = new Uint8Array(256);
+      for (var j = 0; j < BASE_MAP.length; j++) {
+        BASE_MAP[j] = 255;
+      }
+      for (var i = 0; i < ALPHABET.length; i++) {
+        var x = ALPHABET.charAt(i);
+        var xc = x.charCodeAt(0);
+        if (BASE_MAP[xc] !== 255) {
+          throw new TypeError(x + " is ambiguous");
+        }
+        BASE_MAP[xc] = i;
+      }
+      var BASE = ALPHABET.length;
+      var LEADER = ALPHABET.charAt(0);
+      var FACTOR = Math.log(BASE) / Math.log(256); // log(BASE) / log(256), rounded up
+      var iFACTOR = Math.log(256) / Math.log(BASE); // log(256) / log(BASE), rounded up
+      function encode(source) {
+        if (source instanceof Uint8Array) {
+        } else if (ArrayBuffer.isView(source)) {
+          source = new Uint8Array(
+            source.buffer,
+            source.byteOffset,
+            source.byteLength
+          );
+        } else if (Array.isArray(source)) {
+          source = Uint8Array.from(source);
+        }
+        if (!(source instanceof Uint8Array)) {
+          throw new TypeError("Expected Uint8Array");
+        }
+        if (source.length === 0) {
+          return "";
+        }
+        // Skip & count leading zeroes.
+        var zeroes = 0;
+        var length = 0;
+        var pbegin = 0;
+        var pend = source.length;
+        while (pbegin !== pend && source[pbegin] === 0) {
+          pbegin++;
+          zeroes++;
+        }
+        // Allocate enough space in big-endian base58 representation.
+        var size = ((pend - pbegin) * iFACTOR + 1) >>> 0;
+        var b58 = new Uint8Array(size);
+        // Process the bytes.
+        while (pbegin !== pend) {
+          var carry = source[pbegin];
+          // Apply "b58 = b58 * 256 + ch".
+          var i = 0;
+          for (
+            var it1 = size - 1;
+            (carry !== 0 || i < length) && it1 !== -1;
+            it1--, i++
+          ) {
+            carry += (256 * b58[it1]) >>> 0;
+            b58[it1] = carry % BASE >>> 0;
+            carry = (carry / BASE) >>> 0;
+          }
+          if (carry !== 0) {
+            throw new Error("Non-zero carry");
+          }
+          length = i;
+          pbegin++;
+        }
+        // Skip leading zeroes in base58 result.
+        var it2 = size - length;
+        while (it2 !== size && b58[it2] === 0) {
+          it2++;
+        }
+        // Translate the result into a string.
+        var str = LEADER.repeat(zeroes);
+        for (; it2 < size; ++it2) {
+          str += ALPHABET.charAt(b58[it2]);
+        }
+        return str;
+      }
+      function decodeUnsafe(source) {
+        if (typeof source !== "string") {
+          throw new TypeError("Expected String");
+        }
+        if (source.length === 0) {
+          return new Uint8Array();
+        }
+        var psz = 0;
+        // Skip and count leading '1's.
+        var zeroes = 0;
+        var length = 0;
+        while (source[psz] === LEADER) {
+          zeroes++;
+          psz++;
+        }
+        // Allocate enough space in big-endian base256 representation.
+        var size = ((source.length - psz) * FACTOR + 1) >>> 0; // log(58) / log(256), rounded up.
+        var b256 = new Uint8Array(size);
+        // Process the characters.
+        while (source[psz]) {
+          // Decode character
+          var carry = BASE_MAP[source.charCodeAt(psz)];
+          // Invalid character
+          if (carry === 255) {
+            return;
+          }
+          var i = 0;
+          for (
+            var it3 = size - 1;
+            (carry !== 0 || i < length) && it3 !== -1;
+            it3--, i++
+          ) {
+            carry += (BASE * b256[it3]) >>> 0;
+            b256[it3] = carry % 256 >>> 0;
+            carry = (carry / 256) >>> 0;
+          }
+          if (carry !== 0) {
+            throw new Error("Non-zero carry");
+          }
+          length = i;
+          psz++;
+        }
+        // Skip leading zeroes in b256.
+        var it4 = size - length;
+        while (it4 !== size && b256[it4] === 0) {
+          it4++;
+        }
+        var vch = new Uint8Array(zeroes + (size - it4));
+        var j = zeroes;
+        while (it4 !== size) {
+          vch[j++] = b256[it4++];
+        }
+        return vch;
+      }
+      function decode(string) {
+        var buffer = decodeUnsafe(string);
+        if (buffer) {
+          return buffer;
+        }
+        throw new Error("Non-base" + BASE + " character");
+      }
+      return {
+        encode: encode,
+        decodeUnsafe: decodeUnsafe,
+        decode: decode,
+      };
+    }
+    const ALPHABET =
+      "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
+    var bs58 = base(ALPHABET);
+    </script>
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    <script src="Build/Solana.Unity-SDK.loader.js"></script>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var warningBanner = document.querySelector("#unity-warning");
+      
+      // Shows a temporary message banner/ribbon for a few seconds, or
+      // a permanent error message on top of the canvas if type=='error'.
+      // If type=='warning', a yellow highlight color is used.
+      // Modify or remove this function to customize the visually presented
+      // way that non-critical warnings and error messages are presented to the
+      // user.
+      function unityShowBanner(msg, type) {
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
+      
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/Solana.Unity-SDK.loader.js";
+      var config = {
+        dataUrl: "Build/{{{ DATA_FILENAME }}}",
+        frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
+#if USE_WASM
+        codeUrl: "Build/{{{ CODE_FILENAME }}}",
+#endif
+#if MEMORY_FILENAME
+        memoryUrl: "Build/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+        symbolsUrl: "Build/{{{ SYMBOLS_FILENAME }}}",
+#endif
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+        productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+        productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+        showBanner: unityShowBanner,
+      };
+      
+      // Mobile device style: fill the whole browser client area with the game canvas:
+      var meta = document.createElement('meta');
+      meta.name = 'viewport';
+      meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+      document.getElementsByTagName('head')[0].appendChild(meta);
+
+      var canvas = document.querySelector("#unity-canvas");
+      canvas.style.width = "100%";
+      canvas.style.height = "100%";
+      canvas.style.position = "fixed";
+
+      document.body.style.textAlign = "left";
+
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

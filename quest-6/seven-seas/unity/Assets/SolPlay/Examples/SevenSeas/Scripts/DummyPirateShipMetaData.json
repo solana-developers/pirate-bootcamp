@@ -1,0 +1,40 @@
+{
+  "name": "Simple Pirate Ship",
+  "symbol": "Pirate",
+  "description": "Not much, but honest pirates!",
+  "seller_fee_basis_points": 100,
+  "image": "https://shdw-drive.genesysgo.net/AzjHvXgqUJortnr5fXDG2aPkp2PfFMvu4Egr57fdiite/pirateship.png",
+  "animation_url": null,
+  "attributes": [
+    {
+      "trait_type": "Pirates",
+      "value": "1"
+    },{
+      "trait_type": "Rum",
+      "value": "0"
+    },{
+      "trait_type": "Parrots",
+      "value": "1"
+    },{
+      "trait_type": "Arrr!",
+      "value": "69"
+    }
+  ],
+  "external_url": "https://www.solana.com",
+  "properties": {
+    "category": "image",
+    "creators": [
+      {
+        "address": "4mXhAXHujqwe2jRQYJnSWSyPGBeveDBQkUbAh2Epf1gW",
+        "verified": true,
+        "share": 100
+      }
+    ],
+    "files": [
+      {
+        "type": "image/png",
+        "uri": "https://shdw-drive.genesysgo.net/AzjHvXgqUJortnr5fXDG2aPkp2PfFMvu4Egr57fdiite/pirateship.png"
+      }
+    ]
+  }
+}

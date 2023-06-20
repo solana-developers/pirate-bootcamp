@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4a2a67d8ef2134a824b0937a84b0f7, type: 3}
+  m_Name: Medal Handler
+  m_EditorClassIdentifier: 
+  <Medals>k__BackingField:
+  - <Renderer>k__BackingField: {fileID: -3141853523703230512, guid: b704679d3966aec4cb357616bc9340a8, type: 3}
+    <MinPointsRequired>k__BackingField: 40
+  - <Renderer>k__BackingField: {fileID: -4296969237699094177, guid: b704679d3966aec4cb357616bc9340a8, type: 3}
+    <MinPointsRequired>k__BackingField: 30
+  - <Renderer>k__BackingField: {fileID: -8481618476450572432, guid: b704679d3966aec4cb357616bc9340a8, type: 3}
+    <MinPointsRequired>k__BackingField: 20
+  - <Renderer>k__BackingField: {fileID: -1772001183391854334, guid: b704679d3966aec4cb357616bc9340a8, type: 3}
+    <MinPointsRequired>k__BackingField: 10
