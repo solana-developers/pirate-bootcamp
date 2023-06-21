@@ -4,7 +4,7 @@
  */
 
 // import custom helpers for demos
-import { payer, testWallet, connection } from "@/lib/vars";
+import { payer, connection } from "@/lib/vars";
 import { explorerURL, printConsoleSeparator } from "@/lib/helpers";
 
 //
@@ -21,7 +21,6 @@ import {
   //////////////////////////////////////////////////////////////////////////////
 
   console.log("Payer address:", payer.publicKey.toBase58());
-  console.log("Test wallet address:", testWallet.publicKey.toBase58());
 
   //////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////
@@ -91,7 +90,7 @@ import {
   // console.log("tx before signing:", tx);
 
   // sign the transaction with our needed Signers (e.g. `payer` and `keypair`)
-  tx.sign([payer]);
+  tx.sign([payer, keypair]);
 
   console.log("tx after signing:", tx);
 
@@ -101,20 +100,6 @@ import {
 
   // actually send the transaction
   const sig = await connection.sendTransaction(tx);
-
-  const subId = connection.onSignatureWithOptions(
-    sig,
-    val => {
-      console.log("onSignature: triggered");
-      console.log(val);
-    },
-    {
-      commitment: "processed",
-      // enableReceivedNotification: true,
-    },
-  );
-
-  // await connection.on(subId);
 
   /**
    * display some helper text
