@@ -7,12 +7,7 @@ import { payer, connection } from "@/lib/vars";
 import { explorerURL, loadPublicKeysFromFile } from "@/lib/helpers";
 
 import { PublicKey } from "@solana/web3.js";
-import {
-  createAccount,
-  createMint,
-  getOrCreateAssociatedTokenAccount,
-  mintTo,
-} from "@solana/spl-token";
+import { getOrCreateAssociatedTokenAccount, mintTo } from "@solana/spl-token";
 
 (async () => {
   //////////////////////////////////////////////////////////////////////////////
@@ -93,12 +88,4 @@ import {
   );
 
   console.log(explorerURL({ txSignature: mintSig }));
-
-  // // actually send the transaction
-  // const sig = await connection.sendTransaction(tx);
-
-  /**
-   * display some helper text
-   */
-  // printConsoleSeparator();
 })();

@@ -57,16 +57,24 @@ import { Metaplex, bundlrStorage, keypairIdentity } from "@metaplex-foundation/j
     // set our keypair to use, and pay for the transaction
     .use(keypairIdentity(payer))
     // define a storage mechanism to upload with
-    .use(bundlrStorage({
-      address: "https://devnet.bundlr.network",
-      providerUrl: "https://api.devnet.solana.com",
-      timeout: 60000
-    }));
+    .use(
+      bundlrStorage({
+        address: "https://devnet.bundlr.network",
+        providerUrl: "https://api.devnet.solana.com",
+        timeout: 60000,
+      }),
+    );
+
+  console.log("Uploading metadata...");
 
   // upload the JSON metadata
   const { uri } = await metaplex.nfts().uploadMetadata(metadata);
 
-  console.log(uri);
+  console.log("Metadata uploaded:", uri);
+
+  printConsoleSeparator("NFT details");
+
+  console.log("Creating NFT using Metaplex...");
 
   // create a new nft using the metaplex sdk
   const { nft, response } = await metaplex.nfts().create({
