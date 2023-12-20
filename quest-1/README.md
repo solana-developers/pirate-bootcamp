@@ -2,7 +2,8 @@
 
 📘 Write the code to mint yourself an NFT that will represent your pirate ship.
 
-Throughout the bootcamp, we’ll customize this NFT, use it to build other things, and ultimately you’ll battle other NFTs on the high seas.
+Throughout the bootcamp, we’ll customize this NFT, use it to build other things, and ultimately
+you’ll battle other NFTs on the high seas.
 
 ## Workshop Day 1: Solana Basics
 
@@ -17,7 +18,7 @@ Throughout the bootcamp, we’ll customize this NFT, use it to build other thing
 - uses TypeScript and NodeJS
 - yarn (as the package manager)
 
-## Setup locally
+## Set up locally
 
 1. Clone this repo to your local system
 2. Install the packages via `yarn install`
@@ -47,7 +48,7 @@ After reviewing the code in each of these scripts, try running each in order.
 
 ### Running the included Scripts
 
-Once setup locally, you will be able to run the scripts included within this repo:
+Once set up locally, you will be able to run the scripts included within this repo:
 
 ```
 yarn demo ./scripts/<script>
