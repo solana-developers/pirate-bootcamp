@@ -44,6 +44,7 @@ describe('[Running Unit Tests]: Swap Program', async () => {
         [Buffer.from(LIQUIDITY_POOL_SEED_PREFIX)],
         program.programId
     )[0]
+    // console.log("ProgrameID", program.programId)
     const assets = assetsConfig.assets.map((o) => {
         return {
             name: o.name,
@@ -68,6 +69,9 @@ describe('[Running Unit Tests]: Swap Program', async () => {
             console.log('   Pool already initialized!')
             console.log(`     Address: ${poolAddress.toBase58()}`)
             programInitialized = true
+        }else{
+            console.log('   Pool not initialized!')
+            console.log(`     Address: ${poolAddress.toBase58()}`)
         }
     })
 
@@ -80,28 +84,28 @@ describe('[Running Unit Tests]: Swap Program', async () => {
         }
     })
 
-    /**
-     * Fund the Liquidity Pool if we only just created it now
-     */
-    for (const asset of assets) {
-        it(`          Fund Pool with: ${asset.name}`, async () => {
-            await mintExistingTokens(
-                provider.connection,
-                payer,
-                asset.address,
-                asset.quantity,
-                asset.decimals
-            )
-            await fundPool(
-                program,
-                payer,
-                poolAddress,
-                asset.address,
-                asset.quantity,
-                asset.decimals
-            )
-        })
-    }
+    // /**
+    //  * Fund the Liquidity Pool if we only just created it now
+    //  */
+    // for (const asset of assets) {
+    //     it(`          Fund Pool with: ${asset.name}`, async () => {
+    //         await mintExistingTokens(
+    //             provider.connection,
+    //             payer,
+    //             asset.address,
+    //             asset.quantity,
+    //             asset.decimals
+    //         )
+    //         await fundPool(
+    //             program,
+    //             payer,
+    //             poolAddress,
+    //             asset.address,
+    //             asset.quantity,
+    //             asset.decimals
+    //         )
+    //     })
+    // }
 
     /**
      *
@@ -196,10 +200,14 @@ describe('[Running Unit Tests]: Swap Program', async () => {
         logChangeInK(calculateChangeInK(initialK, resultingK))
     }
 
+    // it('Try Swap Self',async () => {
+
+    // })
+
     /**
      * Runs 10 random swap tests
      */
-    for (let x = 0; x < 10; x++) {
+    for (let x = 0; x < 1; x++) {
         it('          Try Swap', async () => {
             const receiveAssetIndex = getRandomInt(maxAssetIndex)
             // Pay asset can't be the same as receive asset

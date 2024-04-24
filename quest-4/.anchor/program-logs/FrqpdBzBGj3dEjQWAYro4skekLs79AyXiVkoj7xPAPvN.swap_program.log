@@ -1,0 +1,11 @@
+Streaming transaction logs mentioning FrqpdBzBGj3dEjQWAYro4skekLs79AyXiVkoj7xPAPvN. Confirmed commitment
+Transaction executed in slot 293537744:
+  Signature: 3Sk5wJ6MjegExdeWdNz89cN7dpErwHMfFHCWSow848umsKsg6rUsKryxKK5FJTuRAVMVTKXgCSKvVbF7S7e7sxTT
+  Status: Ok
+  Log Messages:
+    Program FrqpdBzBGj3dEjQWAYro4skekLs79AyXiVkoj7xPAPvN invoke [1]
+    Program log: Instruction: CreatePool
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program FrqpdBzBGj3dEjQWAYro4skekLs79AyXiVkoj7xPAPvN consumed 7773 of 200000 compute units
+    Program FrqpdBzBGj3dEjQWAYro4skekLs79AyXiVkoj7xPAPvN success

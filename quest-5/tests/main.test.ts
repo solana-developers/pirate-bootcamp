@@ -21,14 +21,14 @@ import { before, describe, it } from 'mocha'
 
 // Swap programs to arbitrage trade
 const SWAP_PROGRAM_1 = new PublicKey(
-    '5koF84vG5xwah17PNRyge3HmqdJZ4rqdqPvZnMKqi8Bq'
+    'FrqpdBzBGj3dEjQWAYro4skekLs79AyXiVkoj7xPAPvN'
 )
 const SWAP_PROGRAM_2 = new PublicKey(
-    'DRP4K7yv8EBftb3roP81idoPtRDJwpak1Apw8d4Df14T'
+    '3ywpNR2Cog8cPfWKT3thmiBFhkZL1f7PCqxuQBdykLwx'
 )
 
 // Temperature `t`: How aggressive should the model be? 0..99
-const temperature = 60
+const temperature = 99
 // Concurrency `n`: Try `n` assets at a time
 const concurrency = 8
 // Iterations `i`: Check all asset pairings `i` times
@@ -146,12 +146,13 @@ describe('Arbitrage Bot', async () => {
                 lookupTable,
                 addresses
             )
-            await sleepSeconds(2)
+
         }
         inlineExtend(tokenAccountsUser)
         inlineExtend(tokenAccountsSwap1)
         inlineExtend(tokenAccountsSwap2)
         inlineExtend(mints)
+        await sleepSeconds(5)
         printAddressLookupTable(connection, lookupTable)
     })
 
@@ -274,4 +275,5 @@ describe('Arbitrage Bot', async () => {
             }
         }
     })
+
 })

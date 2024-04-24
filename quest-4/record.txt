@@ -1,0 +1,7 @@
+Error: AnchorError occurred. Error Code: DeclaredProgramIdMismatch. Error Number: 4100. Error Message: The declared program id does not match the actual program id.
+这个报错 跑了下 anchor test 好像就好了
+
+把lib， anchor里面的programID改过来 solana address ./target/deploy/*.json
+然后 anchor run test即可， 
+
+也需要anchor build， anchor deploy等操作， 按照视频来即可

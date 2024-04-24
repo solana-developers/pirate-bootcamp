@@ -1,0 +1,6 @@
+yarn run test即可， 如果lookuptable少的话 就再运行一次
+
+
+https://explorer.solana.com/tx/4YYA6CePzoG24o7r1yCsGvYQcb17iKiY7HgkCnfK1Guys38jko5SRghPMwyuwWYXBevNFtjk3oU8bJpcE3UUXx9w?cluster=devnet
+
+套利的都会报错如下：Program returned error: "Access violation in unknown section at address 0xffffffffffffffff of size 32"

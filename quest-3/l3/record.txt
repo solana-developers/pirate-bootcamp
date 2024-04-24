@@ -1,0 +1,31 @@
+1. change Anchor toml Cluster = "Devnet"
+2. 
+3. uSpBUMV7dYCb3XSJ3VyTXt6BGRjqKpnK7E6Ep2Fiw4r
+
+4. mintTo 是把Token 创建出来 https://explorer.solana.com/address/9gzAdPu5MrAvin8c8jLcDzaJg7DudDkE4UZA6aQbQUJN?cluster=devnet
+5. initialize 是吧 vaultAccount创建出来 https://explorer.solana.com/address/CbsQbsJyuNcroBCpHNjzkhM8LxZjJ9fmVHYRFdVAR4ZY?cluster=devnet 这个account好像和我们2x无关  
+    vault是分发reward的account
+
+6.     let userTokenAccount = await getOrCreateAssociatedTokenAccount(
+        connection,
+        wallet.payer,
+        mintKeyPair.publicKey,
+        wallet.publicKey
+    ) 这个才是我们的  5EdgnawdMmkd9KCDWYgmmcRvmkmczKU7nSyY6eAt3yJF 收益和unstake的token
+7. 
+stakeInfo PublicKey [PublicKey(QkLjSGx2oEaBZWje6KprQHeDnSgdGZ3bo7nLG3u7vin)] {
+  _bn: <BN: 6155d104ef2c2b1b5d869b15625ced8b3c9fe9ba95e7c4f79697f59aba5e79b>
+} stakeAccount PublicKey [PublicKey(JE3HiPSoD7FNLPHR7wJWTr5xTDSMoZ6zdHr94Tn4cnap)] { token抵押到这里面
+  _bn: <BN: ffedd0c4c31d4571227994c0750cc86cbf549c38022b96faa7dcac69999ed2c5>
+}
+
+
+8. 涉及到的各个Account 可以查看accountFigure.jpg
+
+
+
+
+npx tsx main.ts
+
+遇到program ID不匹配的话， anchor build不管用， 用anchor test
+solana program deploy ./target/deploy/.so --program-id:

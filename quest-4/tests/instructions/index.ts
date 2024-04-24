@@ -18,6 +18,8 @@ export async function createPool(
     payer: Keypair,
     poolAddress: PublicKey
 ) {
+    console.log(` Pool Address ${poolAddress}, payer ${payer.publicKey}, systemProgram ${anchor.web3.SystemProgram.programId}`)
+    // console.log("Should programID",program.methods)
     await program.methods
         .createPool()
         .accounts({
@@ -49,7 +51,7 @@ export async function fundPool(
     quantity: number,
     decimals: number
 ) {
-    await program.methods
+    let tx = await program.methods
         .fundPool(
             new anchor.BN(toBigIntQuantity(quantity, decimals).toString())
         )
@@ -68,6 +70,8 @@ export async function fundPool(
         })
         .signers([payer])
         .rpc()
+
+    console.log(`Funded pool with ${quantity} of ${mint.toBase58()}`)
 }
 
 /**
