@@ -175,7 +175,7 @@ async function handlePost(request, response) {
 Install `@solana/web3.js`
 
 ```bash
-npm i @solana/web3.js
+npm i @solana/web3.js@1
 ```
 
 Create `createChutuluIx` function
