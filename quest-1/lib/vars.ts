@@ -24,7 +24,7 @@ export const testWallet = loadOrGenerateKeypair("testWallet");
 export const CLUSTER_URL = process.env.RPC_URL ?? clusterApiUrl("devnet");
 
 // create a new rpc connection
-export const connection = new Connection(CLUSTER_URL, "single");
+export const connection = new Connection(CLUSTER_URL, "confirmed");
 
 // define an address to also transfer lamports too
 export const STATIC_PUBLICKEY = new PublicKey("nickb1dAk4hKpHVPZenpzqVtw2F8RHnCq27QcfiReXD");
